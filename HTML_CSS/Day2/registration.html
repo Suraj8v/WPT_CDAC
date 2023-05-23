@@ -1,0 +1,58 @@
+<html>
+    <body>
+        <form>
+            <table cellspacing="5" cellpadding="8" style="background-color: rgb(247, 200, 169);" >
+                <tr>
+                    <td><label>Name</label></td>
+                    <td> <input name="name" id="nm" placeholder="Enter name" autofocus required > </td>
+                </tr>
+                <tr>
+                    <td> <label for="ad">Address</label></td>
+                    <td> <textarea name="address" id="ad" rows="4" cols="20" placeholder="Enter Address" ></textarea></td>
+                </tr>
+                <tr>
+                    <td> <label for="d">Booking Date</label></td>
+                    <td> <input type="date" id="d" name="date" value="date" min="2023-05-11" max="2023-05-29"  ></td>
+                </tr>
+                <tr>
+                    <td><label>Gender</label></td>
+                    <td> <input type="radio" name="g" id="m" value="male" ><label for="m">Male</label>
+                    <input type="radio" name="g" id="f" value="female" ><label for="f">Female</label>
+                    <input type="radio" name="g" id="o" value="others" ><label for="o">Others</label></td>
+                </tr>
+                <tr>
+                    <td><Label>Degree</Label></td>
+                    <td> <input type="radio" name="degree" id="be" value="BE"><label for="be">BE</label>
+                    <input type="radio" name="degree" id="bt" value="BTech"><label for="bt">BTech</label>
+                     <input type="radio" name="degree" id="bsc" value="BSC"><label for="bsc">BSC</label> </td>
+                </tr>
+                <tr>
+                    <td> <label>Skills</label></td>
+                    <td> <input type="checkbox" name="skill" id="java" value="java"> <label for="java">Java</label> &nbsp; &nbsp;  
+                     <input type="checkbox" name="skill" id="C++" value="c++"> <label for="c++">C++</label> 
+                    <br>
+                    <input type="checkbox" name="skill" id="py" value="Python"> <label for="py">Python</label> 
+                 <input type="checkbox" name="skill" id="java" value="HTML"> <label for="html">HTML</label> </td>
+                </tr>
+                <tr>
+                    <td><Label>Location</Label></td>
+                    <td> 
+                        <select name="place" id="place">
+                        <option value="---select">--Select one--</option>
+                        <option value="Pune">Pune</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Kolkata">Kolkata</option>
+                        <option value="Pandharpur">Pandharpur</option>
+                         </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button type="submit" name="submit" id="s" value="submit">Submit</button>
+                        &nbsp; &nbsp;
+                    <button type="reset" name="reset" id="r" value="reset">Cancel</button></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
