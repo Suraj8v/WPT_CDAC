@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <script>
+            function validatedata(numid)
+            {
+                var y = document.getElementById(numid).value
+                if(y==="" || isNaN(y))
+                {
+                    return false;
+                }
+               
+                    return true;  
+            }
+
+            function validatenums()
+            {
+                var a1 = validatedata("n1");
+                var b1 = validatedata("n2");
+                if(a1 && b1)
+                {
+                    alert("Data is valid");
+                    addition();
+                }
+                else{
+
+                    alert("Invalid data!");
+                }
+            }
+
+            function addition()
+            {
+                var a = parseInt(document.getElementById("n1").value)
+                var b = parseInt(document.getElementById("n2").value)
+                var add = a+b;
+                
+                document.getElementById("result").value=add;
+            }
+            
+        </script>
+    </head>
+    <body>
+        <form>
+            Number 1 :<input type="text" name="num1" id="n1" > <br>
+            Number 2 :<input type="text" name="num2" id="n2" > <br>
+            Result <input type="text" name="result" id="result" disabled > 
+            <button type="button" name="bt" id="bt" onclick="validatenums()" >add numbers </button>
+
+        </form>
+
+    </body>
+</html>

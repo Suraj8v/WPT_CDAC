@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <style>
+            span{
+                color: red;
+            }
+        </style>
+        <script>
+
+            function validatedata(numid,err)
+            {
+                var num = document.getElementById(numid).value;
+                if(isNaN(num))
+                {
+                    document.getElementById(err).innerHTML="Please enter the numeric value";
+                    return false;
+                }
+                return true;
+            }
+
+            function greatest()
+
+            {
+                var a= parseInt(document.getElementById('n1').value);
+                var b= parseInt(document.getElementById('n2').value);
+                var c= parseInt(document.getElementById('n3').value);
+                validatedata("n1","err1");
+                validatedata("n2","err2");
+                validatedata("n3","err3");
+
+                if(a && b && c)
+                {
+
+                if(a > b)
+                {
+                    if(a>c)
+                    {
+                        document.getElementById("res").value=a;
+                    }
+                }
+                else if(b>c){
+                    document.getElementById("res").value=b;
+                }
+                else{
+                    document.getElementById("res").value=c;
+                }
+            }
+           
+        }
+
+        </script>
+
+    </head>
+    <body>
+        <form>
+            number 1 <input type="text" name="num1" id="n1" required autofocus>
+            <span id="s1">*</span> <span id="err1"></span><br>
+            number 2 <input type="text" name="num1" id="n2" required >
+            <span id="s2">*</span> <span id="err2"></span><br>
+            number 3 <input type="text" name="num1" id="n3" required >
+            <span id="s3">*</span> <span id="err3"></span><br>
+            Greatest number : <input type="tetx" name="result" id="res" disabled>
+            <button type="button" name="bt" id="bt" onclick="greatest()">Find</button>
+           
+        </form>
+
+    </body>
+</html>

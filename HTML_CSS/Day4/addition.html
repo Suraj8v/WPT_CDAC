@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <script>
+            function abc(){
+                var a = parseInt(document.getElementById('n1').value);
+                var b = parseInt(document.getElementById('n2').value);
+                var c= a+b;
+                document.getElementById("result").value=c;
+                document.getElementById("addindiv").innerHTML="Addition "+c;
+
+            }
+        </script>
+    </head>
+    <body>
+        <!-- <div style="display: block;" id="addindiv" >Enter the num1 and num2</div> -->
+        number 1 <input type="number"  name="num1" id="n1">
+        <br>
+        number 2<input type="number"  name="num2"  id="n2">
+        <br>
+        <button type="" id="add" name="result" onclick="abc()">Result</button>
+        <input type="number" id="result" name="res" disabled> 
+
+        <div id="addindiv">Add : </div>
+ 
+    </body>
+</html>
