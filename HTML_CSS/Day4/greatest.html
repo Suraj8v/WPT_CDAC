@@ -10,25 +10,30 @@
             function validatedata(numid,err)
             {
                 var num = document.getElementById(numid).value;
-                if(isNaN(num))
+                if(num<0 || isNaN(num))
                 {
                     document.getElementById(err).innerHTML="Please enter the numeric value";
                     return false;
+                }else{
+                    document.getElementById(err).innerHTML="";
+                    return true;
+
                 }
-                return true;
+                
             }
 
             function greatest()
 
+            
             {
                 var a= parseInt(document.getElementById('n1').value);
                 var b= parseInt(document.getElementById('n2').value);
                 var c= parseInt(document.getElementById('n3').value);
-                validatedata("n1","err1");
-                validatedata("n2","err2");
-                validatedata("n3","err3");
+                var x = validatedata("n1","err1");
+                var y = validatedata("n2","err2");
+                var z =validatedata("n3","err3");
 
-                if(a && b && c)
+                if(x && y && z)
                 {
 
                 if(a > b)
@@ -59,7 +64,7 @@
             <span id="s2">*</span> <span id="err2"></span><br>
             number 3 <input type="text" name="num1" id="n3" required >
             <span id="s3">*</span> <span id="err3"></span><br>
-            Greatest number : <input type="tetx" name="result" id="res" disabled>
+            Greatest number : <input type="text" name="result" id="res" disabled>
             <button type="button" name="bt" id="bt" onclick="greatest()">Find</button>
            
         </form>
