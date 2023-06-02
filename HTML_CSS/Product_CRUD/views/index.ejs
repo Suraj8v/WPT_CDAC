@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+</head>
+<body> 
+    <h1 align="center">Product List</h1>
+    <form action="/displayaddform" >
+        <table border="2px" cellpadding="4px" align="center">
+            <thead>
+                <tr>
+                    <th>pid</th>
+                    <th>pname</th>
+                    <th>price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <%for(var i=0; i<productdata.length; i++){%>
+                <tr>
+                    <td><%=productdata[i].pid%></td>
+                    <td><%=productdata[i].pname%></td>
+                    <td><%=productdata[i].price%></td>
+                </tr>
+                <%}%>
+            </tbody>
+
+        </table>
+            <button type="submit" id="btn" name="btn" value="add"> Add Product</button>
+            
+    </form>
+    
+</body>
+</html>
